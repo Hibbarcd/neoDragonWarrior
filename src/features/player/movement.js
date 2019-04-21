@@ -4,6 +4,7 @@ import { SPRITE_SIZE, MAP_WIDTH, MAP_HEIGHT } from '../../config/constants'
 export default function handleMovement(player) {
 
   function getNewPosition(oldPos, direction) {
+    // eslint-disable-next-line
     switch(direction) {
       case 'WEST':
         return [ oldPos[0]-SPRITE_SIZE, oldPos[1] ]
@@ -17,6 +18,7 @@ export default function handleMovement(player) {
   }
 
   function getSpriteLocation(direction, walkIndex) {
+        // eslint-disable-next-line
     switch(direction) {
       case 'SOUTH':
         return `${SPRITE_SIZE*walkIndex}px ${SPRITE_SIZE*0}px`
@@ -85,7 +87,7 @@ export default function handleMovement(player) {
         return attemptMove('SOUTH')
 
       default:
-        console.log(e.keyCode)
+        //console.log(e.keyCode)
     }
   }
 

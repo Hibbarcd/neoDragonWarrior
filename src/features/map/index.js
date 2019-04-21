@@ -13,6 +13,7 @@ function MapTile(props) {
     />
  }
  function getTileSprite(type) {
+         // eslint-disable-next-line
     switch (type) {
         case 0:
             return 'grass'
