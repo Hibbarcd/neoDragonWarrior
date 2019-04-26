@@ -33,3 +33,17 @@ body {
 .water {
     background-image: url('/tiles/water1.png');
 }
+.onetile_riverEW {
+    background-image: url('/tiles/onetile_riverEW.png');
+
+}
+.onetile_riverNS {
+    background-image: url('/tiles/onetile_riverNS.png');
+
+}
+.up_left_cornerwater {
+    background-image: url('/tiles/up_left_cornerwater.png');
+}
+.bottom_right_cornerwater {
+    background-image: url('/tiles/bottom_right_cornerWater.png');
+}

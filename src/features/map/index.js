@@ -31,6 +31,14 @@ function MapTile(props) {
             return 'rock2'
         case 10: 
             return 'water'
+        case 20:
+            return 'onetile_riverNS'
+        case 21:
+            return 'onetile_riverEW'
+        case 22:
+            return 'up_left_cornerwater'
+        case 23:
+            return 'bottom_right_cornerwater'
     }
    }
  function MapRow(props) { 
