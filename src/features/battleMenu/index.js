@@ -1,18 +1,17 @@
 import React from 'react';
 // import store from '../../config/store'
-// import './style.css';
 import { connect } from 'react-redux';
 
-
- function PartyMenu(props) {
+ function BattleMenu(props) {
         return (
-        <div
+        <div className="BattleMenu"
         style={{
            position: 'relative',
            margin: '0 auto',
-           height: '150px',
-           width: '814px',
-           bottom: '367px',
+           height: '400px',
+           width: '255px',
+           right: '62vh',
+           bottom: '555px',
            border: '5px solid white',
            borderRadius: '15px',
            backgroundColor: 'black',
@@ -27,4 +26,4 @@ import { connect } from 'react-redux';
         ...state.player,
       }
     }
-   export default connect(mapStateToProps)(PartyMenu);
+   export default connect(mapStateToProps)(BattleMenu);
