@@ -1,8 +1,4 @@
 import React from 'react'
-// import { MAP_WIDTH, MAP_HEIGHT } from '../../config/constants';
-// import Map from '../map'
-// import Player from '../player'
-// import { tiles } from '../../data/maps/1'
 import store from '../../config/store'
 import battleMenu from './battleMenu/index'
 
@@ -15,14 +11,13 @@ function BattleScreen(props) {
   return (
     <div
       style={{
-          //this style section controls the battle menu box
-        // position: 'relative',
-        // width: '820px',
-        // height: '560px',
-        // margin: '0 auto',
+          // this style section controls the battle menu box
+        position: 'relative',
+        width: '820px',
+        height: '560px',
+        margin: '0 auto', 
       }}
     >
-
     </div>
   )
 }

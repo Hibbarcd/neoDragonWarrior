@@ -4,7 +4,7 @@ import PartyMenu from './features/worldMenu/index';
 import BattleScreen from './features/battleScreen/index';
 
 //below can be imported as whole from battleScreen when completed
-import BattleMenu from './features/battleMenu/index';
+// import BattleMenu from './features/battleMenu/index';
 
 class App extends Component {
   render() {
@@ -12,7 +12,7 @@ class App extends Component {
       <div>
           <World />
           <BattleScreen />
-          <BattleMenu />
+          {/* <BattleMenu /> */}
           <PartyMenu />
       </div>
     );

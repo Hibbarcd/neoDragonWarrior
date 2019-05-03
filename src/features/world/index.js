@@ -1,9 +1,11 @@
-
 import React from 'react'
 import Map from '../map'
 import Player from '../player'
+// import Enemy from '../enemies'
 import { tiles } from '../../data/maps/1'
 import store from '../../config/store'
+import './style.css'
+
 
 function World(props) {
   store.dispatch({ type: 'ADD_TILES', payload: {
@@ -21,6 +23,8 @@ function World(props) {
     >
       <Map />
       <Player />
+  
+      {/* <Enemy /> */}
     </div>
   )
 }
