@@ -1,38 +1,39 @@
-
-.battleMenu {
+.worldMenu {
     position: relative;
     margin: 0 auto;
-    height: 400px;
-    width: 255px;
-    right: 62vh;
-    bottom: 127.5vh;
+    height: 150px;
+    width: 814px;
+    bottom: 105vh;
     border: 5px solid white;
     border-Radius: 15px;
     background-Color: black;
     color: white;
-    z-index: 15;
+    z-Index: 15;
 }
- h1 {
+h1 {
     position: relative;
+    color: white;
     font-size: 1.4em;
     padding-top: 0px;
+    padding-bottom: 10px;
     z-index: 15;
-    margin: auto;
     width: 145px;
     background-color: black;
     border-radius: 10px;
 }
 h2 {
     position: relative;
+    color: white;
     font-size: 1.1em;
+    margin: 0;
     padding: 0;
-    z-index: 10; 
+    z-index: 15; 
  } 
 ul {
     position: relative;
     display: inline-block;
     padding-right: 70px;
-    z-index: 20;
-    margin: auto;
+    z-index: 15;
+    color: wheat;
     text-decoration: underline;
-} 
+}

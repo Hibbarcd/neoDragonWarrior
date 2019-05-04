@@ -13,14 +13,7 @@ function World(props) {
     tiles,
   }})
   return (
-    <div
-      style={{
-        position: 'relative',
-        width: '820px',
-        height: '560px',
-        margin: '0 auto',
-      }}
-    >
+    <div className= 'worldMap'>
       <Map />
       <Player />
   

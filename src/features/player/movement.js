@@ -46,7 +46,7 @@ export default function handleMovement(player) {
     const y = newPos[1] / SPRITE_SIZE
     const x = newPos[0] / SPRITE_SIZE
     const nextTile = tiles[y][x]
-    return nextTile < 5
+    return nextTile < 10
   }
 
   function dispatchMove(direction, newPos) {
@@ -69,7 +69,13 @@ export default function handleMovement(player) {
     if(observeBoundaries(oldPos, newPos) && observeImpassable(oldPos, newPos))
       dispatchMove(direction, newPos)
   }
+  //===================USE COMMANDS==========================================================================
+  function attemptUse(oldPos) {
+    if (oldPos )
+      return alert("Opened Chest") 
+  }
 
+//===================movement directions=====================================================================
   function handleKeyDown(e) {
     e.preventDefault()
     
@@ -86,14 +92,20 @@ export default function handleMovement(player) {
       case 40:
         return attemptMove('SOUTH')
 
-      default:
-        //console.log(e.keyCode)
+// //=======================USE TILES=============================================================
+
+        case 85:
+        return attemptUse("USE");
+
+        default:
+        console.log(e.keyCode)
     }
   }
-
+  
   window.addEventListener('keydown', (e) => {
     handleKeyDown(e)
   })
+//======================Use Global Tile Handler======================================================================
 
   return player
 }

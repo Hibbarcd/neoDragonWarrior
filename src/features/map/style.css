@@ -47,3 +47,6 @@ body {
 .bottom_right_cornerwater {
     background-image: url('/tiles/bottom_right_cornerWater.png');
 }
+.bridgeEW {
+    background-image: url('/tiles/bridgeEW.png');
+}

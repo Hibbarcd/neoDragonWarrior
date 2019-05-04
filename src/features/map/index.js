@@ -23,14 +23,16 @@ function MapTile(props) {
             return 'tree2'
         case 4:
             return 'tree3'
-        case 11:
+        case 6:
+            return 'bridgeEW'
+        case 9:
             return 'chest'
-        case 5:
-            return 'rock'
-        case 8:
-            return 'rock2'
         case 10: 
             return 'water'
+        case 15:
+            return 'rock'
+        case 18:
+            return 'rock2'
         case 20:
             return 'onetile_riverNS'
         case 21:
