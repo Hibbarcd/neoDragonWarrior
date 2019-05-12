@@ -36,12 +36,12 @@ export default function handleMovement(player) {
     return walkIndex >= 7 ? 0 : walkIndex + 1
   }
 
-  function observeBoundaries(oldPos, newPos) {
+  function observeBoundaries(newPos) {
     return (newPos[0] >= 0 && newPos[0] <= MAP_WIDTH - SPRITE_SIZE) &&
            (newPos[1] >= 0 && newPos[1] <= MAP_HEIGHT - SPRITE_SIZE)
   }
 
-  function observeImpassable(oldPos, newPos) {
+  function observeImpassable( newPos) {
     const tiles = store.getState().map.tiles
     const y = newPos[1] / SPRITE_SIZE
     const x = newPos[0] / SPRITE_SIZE
