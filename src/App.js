@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import World from './features/world';
 import PartyMenu from './features/worldMenu/index';
 import BattleScreen from './features/battleScreen/index';
-import GlobalAudio from './features/music/music';
+import GlobalAudio from './features/music';
 
 //below can be imported as whole from battleScreen when completed
 import BattleMenu from './features/battleScreen/battleMenu/index';

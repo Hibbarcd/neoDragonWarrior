@@ -1,7 +1,7 @@
 
 const initialState = {
   audioTrack: null,
-  isPlaying: true,
+  isPlaying: false,
 };
 
 export const audioReducer = (state = initialState, action) => {
