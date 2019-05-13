@@ -52,6 +52,7 @@ function MapTile(props) {
   }
 
 function Map(props) {
+
     return (
         <div 
         style={{

@@ -8,8 +8,10 @@ import GlobalAudio from './features/music/music';
 //below can be imported as whole from battleScreen when completed
 import BattleMenu from './features/battleScreen/battleMenu/index';
 
+
 class App extends Component {
   render() {
+
     return (
       <div className='wrapper'>
           <GlobalAudio/>

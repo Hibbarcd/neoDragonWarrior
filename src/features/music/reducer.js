@@ -1,17 +1,20 @@
-    const soundsData = {
-        globalAmbient: 'Adventure.mp3'
-      };
 
+const initialState = {
+  audioTrack: null,
+  isPlaying: true,
+};
 
-  const audioReducer = (state=soundsData, action) => {
-    switch(action.type) {
-      case 'PLAY_MUSIC':
-        return {
-          ...action.payload
-        }
-      default:
-        return state
+export const audioReducer = (state = initialState, action) => {
+  switch (action.type) {
+
+  case 'GLOBAL_TRACK':
+    return {
+      ...state,
+      audioTrack: action.payload,
     }
+
+  default: return state
   }
-  
-  export default audioReducer
+}
+
+export default audioReducer
