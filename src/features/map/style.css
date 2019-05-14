@@ -35,18 +35,34 @@ body {
 }
 .onetile_riverEW {
     background-image: url('/tiles/onetile_riverEW.png');
-
 }
 .onetile_riverNS {
     background-image: url('/tiles/onetile_riverNS.png');
-
 }
-.up_left_cornerwater {
-    background-image: url('/tiles/up_left_cornerwater.png');
+.top_left_cornerwater {
+    background-image: url('/tiles/top_left_cornerwater.png');
+}
+.top_right_cornerwater {
+    background-image: url('/tiles/top_right_cornerwater.png');
 }
 .bottom_right_cornerwater {
     background-image: url('/tiles/bottom_right_cornerWater.png');
 }
+.bottom_left_cornerwater {
+    background-image: url('/tiles/bottom_left_cornerwater.png');
+}
 .bridgeEW {
     background-image: url('/tiles/bridgeEW.png');
+}
+.bridgeNS {
+    background-image: url('/tiles/bridgeNS.png');
+}
+.lake_EastShore {
+    background-image: url('/tiles/lake_EastShore.png');
+}
+.lake_SouthShore {
+    background-image: url('/tiles/lake_SouthShore.png');
+}
+.cave {
+    background-image: url('/tiles/cave.png');
 }

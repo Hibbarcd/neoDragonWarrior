@@ -41,12 +41,12 @@ export default function handleMovement(player) {
            (newPos[1] >= 0 && newPos[1] <= MAP_HEIGHT - SPRITE_SIZE)
   }
 
-  function observeImpassable( newPos) {
+  function observeImpassable(oldPos, newPos) {
     const tiles = store.getState().map.tiles
     const y = newPos[1] / SPRITE_SIZE
     const x = newPos[0] / SPRITE_SIZE
     const nextTile = tiles[y][x]
-    return nextTile < 10
+    return nextTile <= 149 
   }
 
   function dispatchMove(direction, newPos) {

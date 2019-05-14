@@ -15,32 +15,46 @@ function MapTile(props) {
  function getTileSprite(type) {
          // eslint-disable-next-line
     switch (type) {
-        case 0:
+        case 100:
             return 'grass'
-        case 2:
+        case 102:
             return 'tree'
-        case 3: 
+        case 103: 
             return 'tree2'
-        case 4:
+        case 104:
             return 'tree3'
-        case 6:
+        case 106:
             return 'bridgeEW'
-        case 9:
+        case 107:
+            return 'bridgeNS'
+        case 109:
             return 'chest'
-        case 10: 
-            return 'water'
-        case 15:
+        case 110:
+            return 'cave'
+//======================impassables===========================
+        case 150:
             return 'rock'
-        case 18:
+        case 151:
             return 'rock2'
-        case 20:
+        case 180: 
             return 'onetile_riverNS'
-        case 21:
+        case 181: 
             return 'onetile_riverEW'
-        case 22:
-            return 'up_left_cornerwater'
-        case 23:
+        case 182:
+            return 'top_left_cornerwater'
+        case 183:
             return 'bottom_right_cornerwater'
+        case 184:
+            return 'top_right_cornerwater'
+        case 185:
+            return 'bottom_left_cornerwater'
+        case 160: 
+            return 'water'
+        case 161:
+            return 'lake_EastShore'
+        case 162:
+            return 'lake_SouthShore'
+//==================================================================
     }
    }
  function MapRow(props) { 
