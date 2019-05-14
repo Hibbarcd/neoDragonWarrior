@@ -27,11 +27,30 @@ function MapTile(props) {
             return 'bridgeEW'
         case 107:
             return 'bridgeNS'
+//=======================Interractive Tiles=================================
         case 109:
             return 'chest'
         case 110:
             return 'cave'
-//======================impassables===========================
+        case 111:
+            return 'tower'
+//==========================Town Tiles ===================================
+        case 112:
+            return 'village'
+        case 113:
+            return 'town_left'
+        case 114:
+            return 'town_right'
+//=========================Castle Tiles===============================================
+        case 120:
+            return 'castle_top_left'
+        case 121:
+            return 'castle_top_right'
+        case 122: 
+            return 'castle_bottom_left'
+        case 123:
+            return 'castle_bottom_right'
+//======================Impassable Tiles===========================
         case 150:
             return 'rock'
         case 151:
