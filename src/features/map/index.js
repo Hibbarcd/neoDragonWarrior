@@ -54,7 +54,7 @@ function MapTile(props) {
         case 150:
             return 'rock'
         case 151:
-            return 'rock2'
+            // return 'rock2'
         case 180: 
             return 'onetile_riverNS'
         case 181: 
