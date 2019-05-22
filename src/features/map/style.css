@@ -66,3 +66,6 @@ body {
 .cave {
     background-image: url('/tiles/cave.png');
 }
+.village {
+    background-image: url('/tiles/town.png');
+}
