@@ -10,6 +10,7 @@ import BattleMenu from './features/battleScreen/battleMenu/index';
 
 
 class App extends Component {
+  
   render() {
 
     return (
