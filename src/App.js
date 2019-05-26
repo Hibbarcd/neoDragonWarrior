@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 // import Wrapper from "./features/wrapper/index";
 import World from './features/world';
-import PartyMenu from './features/worldMenu/index';
+import PartyMenu from './features/partyStatusMenu/index';
 import BattleScreen from './features/battleScreen/index';
 import GlobalAudio from './features/music';
 
@@ -15,7 +15,7 @@ class App extends Component {
 
     return (
       <div className='wrapper'>
-          <GlobalAudio/>
+          {/* <GlobalAudio/> */}
           <World />
           <BattleScreen />
           <BattleMenu />

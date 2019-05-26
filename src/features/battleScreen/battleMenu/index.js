@@ -6,13 +6,23 @@ import { connect } from 'react-redux';
  function BattleMenu(props) {
         return (         
         <div className="battleMenu">
-            <h1> Battle Menu </h1>
-              <h2>
-                <ul>LV</ul>
-                <ul>HP</ul>
-                <ul>MP</ul>
-                <ul>E</ul>
-              </h2>    
+        <h1>Battle Commands</h1>
+          <table className="commandsMenu">
+            <tbody id='commands'>
+            <tr id="fight">
+              <td>FIGHT</td>
+            </tr>
+            <tr id="spell">            
+              <td>SPELL</td>
+            </tr>
+            <tr id="run">
+              <td>RUN</td>
+            </tr>
+            <tr id="item">
+              <td>ITEM</td>
+            </tr>               
+          </tbody>
+        </table> 
           </div>
         )
  }

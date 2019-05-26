@@ -2,11 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Star Wars - Express</title>
+  <title>Character Gen</title>
   <!-- Latest compiled and minified CSS & JS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css"/>
+  <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css"/>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 </head>
@@ -14,10 +13,10 @@
 
   <div class="container">
     <div class="jumbotron">
-      <h1>Character Creation Express</h1>
-      <h3>Welcome to Lucinda's Inn, where all the best heroes are found!</h3>
+      <h1>Character Creation</h1>
+      <!-- <h3>Welcome to Lucinda's Inn, where all the best heroes are found!</h3> -->
       <hr>
-      <a href="/"><button class="btn btn-danger btn-lg"><span class="fa fa-eye"></span> View Characters</button></a>
+      <!-- <a href="/"><button class="btn btn-danger btn-lg"><span class="fa fa-eye"></span> View Characters</button></a> -->
     </div>
     <div class="row">
 
@@ -80,7 +79,7 @@
                 <label for="luc">Luck</label>
                 <div class="generatedLUC" id="luck">
               </div>
-              <button type="submit" class="btn btn-primary btn-md" id="add-btn"><span class="fa fa-fire"></span> Re-roll Stats</button>
+              <button type="submit" class="btn btn-primary btn-md" id="reset-btn"><span class="fa fa-fire"></span> Re-roll Stats</button>
 
             <div class="text-right">
               <button type="submit" class="btn btn-primary btn-md" id="add-btn"><span class="fa fa-fire"></span> Add to the Party</button>
@@ -94,42 +93,25 @@
 
   <script type="text/javascript">
 
-    $("#add-btn").on("click", function(event) {
-      event.preventDefault();
-      var newCharacter = {
-        name: $("#name").val().trim(),
-        class: $("#class").val().trim(),
-        sex: $("#sex").val().trim(),
-        maxHP: $("#health-points").val().trim(),
-        maxMP: $("#magic-points").val().trim()
+    // $("#add-btn").on("click", function(event) {
+    //   event.preventDefault();
+    //   var newCharacter = {
+    //     name: $("#name").val().trim(),
+    //     class: $("#class").val().trim(),
+    //     sex: $("#sex").val().trim(),
+    //     maxHP: $("#health-points").val().trim(),
+    //     maxMP: $("#magic-points").val().trim()
 
-      };
+    //   };
 
-      $.post("/api/characters", newCharacter)
-        .then(function(data) {
-          console.log("add.html", data);
-          alert("Adding character...");
-        });
-    });
-
-    var randomHP = Math.floor(Math.random()*(50-15)+15);
-    var randomMP = Math.floor(Math.random()*(40-12)+11);
-    $("#health-points").text(randomHP);
-    $("#magic-points").text(randomMP);
-
-    var randomSTR = Math.floor(Math.random()*(18-5)+5);
-    var randomVIT = Math.floor(Math.random()*(10-5)+5);
-    var randomAGI = Math.floor(Math.random()*(12-5)+5);
-    var randomINT = Math.floor(Math.random()*(13-5)+4);
-    var randomLUC = Math.floor(Math.random()*(10-5)+5);
-    $("#strength").text(randomSTR);
-    $("#vitality").text(randomVIT);
-    $("#agility").text(randomAGI);
-    $("#intelligence").text(randomINT);
-    $("#luck").text(randomLUC);
-
+    //   $.post("/api/characters", newCharacter)
+    //     .then(function(data) {
+    //       console.log("add.html", data);
+    //       alert("Adding character...");
+    //     });
+    // });
   </script>
-    <!-- <script src="assets/javascript/script.js"></script>  -->
+    <script src="assets/javascript/script.js"></script> 
 
 </body>
 </html>
