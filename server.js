@@ -1,5 +1,9 @@
 const express = require('express');
 const path = require('path');
+//If switching to MongoDB
+// const mongoose = require("mongoose");
+// const routes = require("./routes");
+
 const PORT = process.env.PORT || 3001;
 const app = express();
 // require("/src/routes/htmlRoutes")(app);
@@ -10,6 +14,16 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public/html')));
 
+// Serve up static assets (usually on heroku)
+
+// if (process.env.NODE_ENV === "production") {
+//   app.use(express.static("client/build"));
+// }
+
+// app.use(routes);
+
+// const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/reactreadinglist";
+// mongoose.connect(MONGODB_URI || { useNewUrlParser: true });
 
 var characters = [
     {

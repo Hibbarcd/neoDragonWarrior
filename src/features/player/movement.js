@@ -66,7 +66,7 @@ export default function handleMovement(player) {
     const oldPos = store.getState().player.position
     const newPos = getNewPosition(oldPos, direction)
 
-    if(observeBoundaries(oldPos, newPos) && observeImpassable(oldPos, newPos))
+    if(observeBoundaries(newPos) && observeImpassable(oldPos, newPos))
       dispatchMove(direction, newPos)
   }
   //===================USE COMMANDS==========================================================================

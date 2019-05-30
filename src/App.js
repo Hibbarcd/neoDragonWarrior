@@ -7,21 +7,38 @@ import GlobalAudio from './features/music';
 
 //below can be imported as whole from battleScreen when completed
 import BattleMenu from './features/battleScreen/battleMenu/index';
-
+// import API from './utils/API';
+// import User from './utils/User';
 
 class App extends Component {
-  
-  render() {
+  //===============================experimental code block============
+  constructor(props) {
+    super(props);
 
+    this.state = {
+      isLoading: true,
+      name: null,
+      avatar: null,
+      email: null
+    };
+  }
+//============================end experimental code block================
+  render() {
     return (
       <div className='wrapper'>
-          {/* <GlobalAudio/> */}
+          <GlobalAudio/>
+          {/* <User name="Jessica Doe" avatar="..." email="hello@jessica.com" />; */}
           <World />
           <BattleScreen />
           <BattleMenu />
           <PartyMenu />
-      </div>
-    );
+      </div>     
+    );    
+  }
+  async componentDidMount() {
+    // Load async data.
+    // Update state with new data.
+    // Re-render our component.
   }
 }
 

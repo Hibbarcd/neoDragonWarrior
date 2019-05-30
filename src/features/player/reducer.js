@@ -1,7 +1,7 @@
 const initialState = {
-    position: [0, 0],
+    position: [640, 0],
     spriteLocation: '0px 0px',
-    direction: 'east',
+    direction: 'EAST',
     walkIndex: 0,
   }
   
