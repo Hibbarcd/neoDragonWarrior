@@ -1,4 +1,10 @@
 Reskin of the original Dragon Warrior games for NES.
+Basics of game remain similar, with improvements for the nostalgic kept to a minimum. 
+
+Action keys will be direction arrows, along with 
+
+'U' for use item/interract with item tile on map screen
+'enter' key or clicking on options with mouse will engage user's choice.
 
 ## Available Scripts
 

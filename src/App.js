@@ -4,7 +4,7 @@ import World from './features/world';
 import PartyMenu from './features/partyStatusMenu/index';
 import BattleScreen from './features/battleScreen/index';
 import GlobalAudio from './features/music';
-
+import SaveBtn from './features/saveButton/saveState';
 //below can be imported as whole from battleScreen when completed
 import BattleMenu from './features/battleScreen/battleMenu/index';
 // import API from './utils/API';
@@ -18,7 +18,6 @@ class App extends Component {
     this.state = {
       isLoading: true,
       name: null,
-      avatar: null,
       email: null
     };
   }
@@ -27,11 +26,12 @@ class App extends Component {
     return (
       <div className='wrapper'>
           <GlobalAudio/>
-          {/* <User name="Jessica Doe" avatar="..." email="hello@jessica.com" />; */}
+          {/* <User name="Jessica Doe" email="hello@jessica.com" />; */}
           <World />
           <BattleScreen />
           <BattleMenu />
           <PartyMenu />
+          <SaveBtn />
       </div>     
     );    
   }

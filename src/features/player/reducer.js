@@ -3,6 +3,10 @@ const initialState = {
     spriteLocation: '0px 0px',
     direction: 'EAST',
     walkIndex: 0,
+    HP: 30,
+    MP: 10,
+    gold: 50,
+    items: ['clothes','club','medical herb']
   }
   
   const playerReducer = (state=initialState, action) => {

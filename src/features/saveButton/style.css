@@ -1,0 +1,13 @@
+.saveButton {
+    position: relative;
+    margin: 0 auto;
+    height: 40px;
+    width: 85px;
+    right: 62vh;
+    bottom: 147.5vh;
+    border: 5px solid white;
+    border-Radius: 15px;
+    background-Color: black;
+    color: white;
+    z-index: 15;
+}
