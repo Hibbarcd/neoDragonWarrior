@@ -1,11 +1,12 @@
 import React from 'react';
 import './style.css';
 import { connect } from 'react-redux';
-
+import player from '../player/index';
+import rootReducer from '../../config/store'
 function clickSave() {
   
     console.log('Game state saved!')
-    console.log()
+    console.log(rootReducer.getState(player))
 }
  function SaveBtn() {
         return (         
