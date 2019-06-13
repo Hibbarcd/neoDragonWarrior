@@ -1,21 +1,19 @@
 import React from 'react'
 import { connect } from 'react-redux'
-// import enemySprite from './monster_list.png'
+import enemy from './monster_list.png'
 import handleEnemy from './randomEnemy'
-import enemy from './slime.png'
 
-function Enemy(props) {
+function EnemySprite(props) {
   return (
     <div
       style={{
         position: 'absolute',
-        // top: props.position[1],
-        // left: props.position[0],
+        top: props.position[1],
+        left: props.position[0],
         backgroundImage: `url(${enemy.png}')`,
-        // backgroundImage: `url('${enemySprite}')`,
-        // backgroundPosition: props.spriteLocation,
-        width: '400px',
-        height: '400px',
+        backgroundPosition: props.spriteLocation,
+        width: '300px',
+        height: '300px',
       }}
     />
   )
@@ -27,4 +25,4 @@ function mapStateToProps(state) {
   }
 }
 
-export default connect(mapStateToProps)(handleEnemy(Enemy))
+export default connect(mapStateToProps)(handleEnemy(EnemySprite))

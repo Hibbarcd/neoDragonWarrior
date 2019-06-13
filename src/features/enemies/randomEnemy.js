@@ -1,52 +1,39 @@
 import store from '../../config/store'
-import { SPRITE_SIZE, MAP_WIDTH, MAP_HEIGHT } from '../../config/constants'
+import { ENEMY_SPRITE_SIZE } from '../../config/constants'
 
 export default function handleEnemy(enemy) {
 
   function getNewEnemy(oldPos, typeSprite) {
     // eslint-disable-next-line
     switch(typeSprite) {
-      case 'WEST':
-        return [ oldPos[0]-SPRITE_SIZE, oldPos[1] ]
-      case 'EAST':
-        return [ oldPos[0]+SPRITE_SIZE, oldPos[1] ]
-      case 'NORTH':
-        return [ oldPos[0], oldPos[1]-SPRITE_SIZE ]
-      case 'SOUTH':
-        return [ oldPos[0], oldPos[1]+SPRITE_SIZE ]
+      case 'MANTIS':
+        return [ oldPos[0]-ENEMY_SPRITE_SIZE, oldPos[1] ]
+      case 'RED_SLIME':
+        return [ oldPos[0]+ENEMY_SPRITE_SIZE, oldPos[1] ]
+      case 'MOLEMAN':
+        return [ oldPos[0], oldPos[1]-ENEMY_SPRITE_SIZE ]
+      case 'EARMOUSE':
+        return [ oldPos[0], oldPos[1]+ENEMY_SPRITE_SIZE ]
     }
   }
 
   function getSpriteLocation(typeSprite, enemyIndex) {
         // eslint-disable-next-line
     switch(typeSprite) {
-      case 'SOUTH':
-        return `${SPRITE_SIZE*enemyIndex}px ${SPRITE_SIZE*0}px`
-      case 'EAST':
-        return `${SPRITE_SIZE*enemyIndex}px ${SPRITE_SIZE*1}px`
-      case 'WEST':
-        return `${SPRITE_SIZE*enemyIndex}px ${SPRITE_SIZE*2}px`
-      case 'NORTH':
-        return `${SPRITE_SIZE*enemyIndex}px ${SPRITE_SIZE*3}px`
+      case 'MANTIS':
+        return `${ENEMY_SPRITE_SIZE*enemyIndex}px ${ENEMY_SPRITE_SIZE*0}px`
+      case 'RED_SLIME':
+        return `${ENEMY_SPRITE_SIZE*enemyIndex}px ${ENEMY_SPRITE_SIZE*1}px`
+      case 'MOLEMAN':
+        return `${ENEMY_SPRITE_SIZE*enemyIndex}px ${ENEMY_SPRITE_SIZE*2}px`
+      case 'EARMOUSE':
+        return `${ENEMY_SPRITE_SIZE*enemyIndex}px ${ENEMY_SPRITE_SIZE*3}px`
     }
   }
 
   function getEnemyIndex() {
     const enemyIndex = store.getState().enemy.enemyIndex
-    return enemyIndex >= 7 ? 0 : enemyIndex + 1
-  }
-
-  function observeBoundaries(oldPos, newPos) {
-    return (newPos[0] >= 0 && newPos[0] <= MAP_WIDTH - SPRITE_SIZE) &&
-           (newPos[1] >= 0 && newPos[1] <= MAP_HEIGHT - SPRITE_SIZE)
-  }
-
-  function observeImpassable(oldPos, newPos) {
-    const tiles = store.getState().map.tiles
-    const y = newPos[1] / SPRITE_SIZE
-    const x = newPos[0] / SPRITE_SIZE
-    const nextTile = tiles[y][x]
-    return nextTile < 5
+    return enemyIndex >= 5 ? 0 : enemyIndex + 1
   }
 
   function dispatchEnemy(typeSprite, newPos) {
@@ -62,13 +49,11 @@ export default function handleEnemy(enemy) {
     })
   }
 
-  function attemptMove(typeSprite) {
+  function displayEnemyTest(typeSprite) {
     const oldPos = store.getState().enemy.position
     const newPos = getNewEnemy(oldPos, typeSprite)
   
-    if(observeBoundaries(oldPos, newPos) 
-    && 
-    observeImpassable(oldPos, newPos))
+
       dispatchEnemy(typeSprite, newPos)
   }
 
@@ -76,20 +61,20 @@ export default function handleEnemy(enemy) {
     e.preventDefault()
     
     switch(e.keyCode) {
-      case 37:
-        return attemptMove('WEST')
+      case 49:
+        return displayEnemyTest('MANTIS')
 
-      case 38:
-        return attemptMove('NORTH')
+      case 50:
+        return displayEnemyTest('RED_SLIME')
 
-      case 39:
-        return attemptMove('EAST')
+      case 51:
+        return displayEnemyTest('MOLEMAN')
 
-      case 40:
-        return attemptMove('SOUTH')
+      case 51:
+        return displayEnemyTest('EARMOUSE')
 
       default:
-        //console.log(e.keyCode)
+        console.log(e.keyCode)
     }
   }
 

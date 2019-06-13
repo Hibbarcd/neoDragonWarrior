@@ -27,11 +27,13 @@ class App extends Component {
       <div className='wrapper'>
           <GlobalAudio/>
           {/* <User name="Jessica Doe" email="hello@jessica.com" />; */}
-          <World />
-          <BattleScreen />
-          <BattleMenu />
-          <PartyMenu />
-          <SaveBtn />
+        <div className='worldMap visible'>
+            <World />
+        </div>
+            <BattleScreen />
+            <BattleMenu />
+            <PartyMenu />
+            <SaveBtn />
       </div>     
     );    
   }
