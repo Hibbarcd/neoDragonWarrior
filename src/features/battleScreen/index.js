@@ -3,13 +3,14 @@ import store from '../../config/store'
 import battleMenu from './battleMenu/index'
 
 
-function BattleScreen() {
+function BattleScreen(props) {
   store.dispatch({ type: 'BATTLE_SCREEN', payload: {
     //ES6 can use tiles:tiles or tiles, to mean the same thing
     battleMenu,
   }})
   return (
-    <div className="worldMap visible"
+    <div className="battleScreen-overlay"
+    
       style={{
           // this style section controls the battle menu box
         position: 'relative',
@@ -17,29 +18,35 @@ function BattleScreen() {
         height: '560px',
         margin: '0 auto',
         backgroundColor: 'black',
+        display: 'none',
       }}
     >
     </div>
   )
 }
-function hideWorld(worldMap) {
-  // document.getElementsByClassName('worldMap').classList.remove('visible');
-  worldMap.classList.remove('visible');
-  console.log('removed visible');
+//=====================default state===================================
+function hideBattleScreen() {
+  let active = false;
+  console.log(active);
 }
+hideBattleScreen()
+//=======================================================================
 
+
+//=========================reveal battle Screen==========================
 function battleBeginning() {
     console.log('Starting Battle')
-  hideWorld();
+    let active = true;
+    console.log(active)
 }
-
+//======================================================================
 function handleKeyDown(e) {
     e.preventDefault()
     
     switch(e.keyCode) {
         case 13:
             return battleBeginning()
-
+ 
       default:
         console.log(e.keyCode)
     }

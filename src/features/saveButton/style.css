@@ -10,4 +10,5 @@
     background-Color: black;
     color: white;
     z-index: 15;
+    display: none;
 }

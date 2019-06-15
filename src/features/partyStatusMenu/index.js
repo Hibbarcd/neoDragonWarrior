@@ -4,7 +4,13 @@ import './style.css'
 
  function PartyMenu(props) {
         return (
-          <table className="worldMenu">
+          <table className="Party_Status_Menu"
+                style={{
+          // this style section controls the battle menu box
+        position: 'relative',
+        bottom: '42vh',            
+      }}
+      >
           {/* <h1> Const(fight screen party stats) Menu </h1> */}
           <tbody>
             <tr>
