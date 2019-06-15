@@ -2,7 +2,7 @@
 Reskin of the original Dragon Warrior games for NES.
 Basics of game remain similar, with improvements for the nostalgic kept to a minimum. 
 
-![alt text](https://github.com/Hibbarcd/neoDragonWarrior/src/data/logo.png "MidgaardSoft Inc.")
+![alt text](https://github.com/Hibbarcd/neoDragonWarrior/public/logo.png "MidgaardSoft Inc.")
 
 # [clayton.hibbard.com] Go to my website for more information on this project
 
