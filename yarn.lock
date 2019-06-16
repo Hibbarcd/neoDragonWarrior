@@ -4941,6 +4941,11 @@ hash.js@^1.0.0, hash.js@^1.0.3:
     inherits "^2.0.3"
     minimalistic-assert "^1.0.1"
 
+hashids@^1.1.1:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/hashids/-/hashids-1.2.2.tgz#28635c7f2f7360ba463686078eee837479e8eafb"
+  integrity sha512-dEHCG2LraR6PNvSGxosZHIRgxF5sNLOIBFEHbj8lfP9WWmu/PWPMzsip1drdVSOFi51N2pU7gZavrgn7sbGFuw==
+
 hast-util-from-parse5@^5.0.0:
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/hast-util-from-parse5/-/hast-util-from-parse5-5.0.0.tgz#a505a05766e0f96e389bfb0b1dd809eeefcef47b"
@@ -8638,6 +8643,13 @@ react-is@^16.8.4:
   version "16.8.6"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.8.6.tgz#5bbc1e2d29141c9fbdfed456343fe2bc430a6a16"
   integrity sha512-aUk3bHfZ2bRSVFFbbeVS4i+lNPZr3/WM5jT2J5omUVV1zzcs1nAaf3l51ctA5FFvCRbhrH0bdAsRRQddFJZPtA==
+
+react-key-index@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/react-key-index/-/react-key-index-0.1.1.tgz#8319e4f0961ae44a8eb0a4f76e4c210ef6d39cda"
+  integrity sha1-gxnk8JYa5EqOsKT3bkwhDvbTnNo=
+  dependencies:
+    hashids "^1.1.1"
 
 react-redux@^6.0.1:
   version "6.0.1"

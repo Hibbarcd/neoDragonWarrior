@@ -2,6 +2,7 @@ import React from 'react';
 import { SPRITE_SIZE } from '../../config/constants';
 import './style.css';
 import { connect } from 'react-redux';
+// import keyIndex from 'react-key-index';
 
 function MapTile(props) { 
     return <div 
@@ -73,22 +74,28 @@ function MapTile(props) {
             return 'lake_EastShore'
         case 162:
             return 'lake_SouthShore'
-//==================================================================
+        }
     }
-   }
+//==================================================================
+  
+   //=====================================================================================
+   
  function MapRow(props) { 
      return <div className='row'>
+
      {
-         props.tiles.map(tile => <MapTile tile={tile} /> )
+         props.tiles.map(tile => 
+         <MapTile tile={tile} 
+         
+         /> )
      }
      </div> 
   }
 
 function Map(props) {
-
-    return (
-        <div 
-        style={{
+        return (
+            <div 
+         style={{
             position: 'relative',
             top: '0px',
             left: '0px',
@@ -105,9 +112,11 @@ function Map(props) {
         </div>
     )
 }
+
 function mapStateToProps(state){
 return {
     tiles: state.map.tiles,
+
 }
 }
 export default connect(mapStateToProps)(Map);
