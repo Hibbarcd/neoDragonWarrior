@@ -5,8 +5,10 @@ import PartyMenu from './features/partyStatusMenu/index';
 import BattleScreen from './features/battleScreen/index';
 import GlobalAudio from './features/music';
 import SaveBtn from './features/saveButton/saveState';
-//below can be imported as whole from battleScreen when completed
-import BattleMenu from './features/battleScreen/battleMenu/index';
+//below can be imported as whole from battleScreen when testing is completed
+// import BattleMenu from './features/battleScreen/battleMenu/index';
+import BattleMenuTest from './features/TestTransBattleScreen/battleMenuTest/index'
+// import BattleScreenTest from './features/TestTransBattleScreen/index'
 // import API from './utils/API';
 // import User from './utils/User';
 
@@ -30,8 +32,10 @@ class App extends Component {
         <div className='worldMap visible'>
             <World />
         </div>
-            <BattleScreen />
-            <BattleMenu />
+            {/* <BattleScreen /> */}
+            {/* <BattleScreenTest /> */}
+            <BattleMenuTest />
+            {/* <BattleMenu /> */}
             <PartyMenu />
             <SaveBtn />
       </div>     

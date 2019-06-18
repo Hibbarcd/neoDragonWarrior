@@ -1,25 +1,24 @@
 import React from 'react'
 import store from '../../config/store'
-import battleMenu from './battleMenu/index'
+import battleMenuTest from './battleMenuTest/index'
 // import { TransitionGroup, CSSTransition } from "react-transition-group";
 
-function BattleScreen(props) {
+function BattleScreenTest(props) {
   store.dispatch({ type: 'BATTLE_SCREEN', payload: {
     //ES6 can use tiles:tiles or tiles, to mean the same thing
-    battleMenu,
+    battleMenuTest,
   }})
   return (    
     <div className="battleScreen-overlay"
     
-      style={{
-          // this style section controls the battle menu box
-        position: 'relative',
-        width: '820px',
-        height: '560px',
-        margin: '0 auto',
-        backgroundColor: 'black',
-        display: 'none',
-      }}
+      // style={{
+      //     // this style section controls the battle menu box
+      //   position: 'relative',
+      //   width: '820px',
+      //   height: '560px',
+      //   margin: '0 auto',
+      //   backgroundColor: 'black',
+      // }}
     >
     </div>
   )
@@ -55,4 +54,4 @@ function handleKeyDown(e) {
   window.addEventListener('keydown', (e) => {
     handleKeyDown(e)
   })
-export default BattleScreen
+export default BattleScreenTest
