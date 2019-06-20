@@ -18,6 +18,8 @@ function MapTile(props) {
     switch (type) {
         case 100:
             return 'grass'
+        // case 101:
+        //     return 'black'
         case 102:
             return 'tree'
         case 103: 

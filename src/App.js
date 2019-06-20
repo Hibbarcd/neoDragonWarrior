@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 // import Wrapper from "./features/wrapper/index";
 import World from './features/world';
 import PartyMenu from './features/partyStatusMenu/index';
-import BattleScreen from './features/battleScreen/index';
 import GlobalAudio from './features/music';
 import SaveBtn from './features/saveButton/saveState';
 //below can be imported as whole from battleScreen when testing is completed
@@ -33,7 +32,6 @@ class App extends Component {
             <World />
         </div>
             {/* <BattleScreen /> */}
-            {/* <BattleScreenTest /> */}
             <BattleMenuTest />
             {/* <BattleMenu /> */}
             <PartyMenu />

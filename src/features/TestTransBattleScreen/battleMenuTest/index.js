@@ -2,12 +2,24 @@ import React from 'react';
 // import store from '../../config/store'
 import './style.css'
 import { connect } from 'react-redux';
+import App from '../../../App';
 
  function BattleMenuTest(props) {
-        return (         
+   let combatBegin = props.combatBegin 
+   console.log(combatBegin)
+   combatBegin = false;
+   console.log(combatBegin)
+
+   if (props.combatBegin) {  
+    return (
+    <div className='noncombat' />
+  )
+   }
+   
+      else  {
+      return (         
         <div className="battleMenuTest">
           <table className="commandsMenu">
-          <h1>Battle Commands</h1>
             <tbody id='commands'>
             <tr id="fight">
               <td>FIGHT</td>
@@ -26,9 +38,36 @@ import { connect } from 'react-redux';
           </div>
         )
  }
+}
+ 
+//=========================reveal battle Screen==========================
+function battleBeginning(combatBegin) {
+  combatBegin = true
+  console.log('Starting Battle')
+  console.log(combatBegin)
+}
+  
+
+//======================================================================
+function handleKeyDown(e) {
+  e.preventDefault()
+  
+  switch(e.keyCode) {
+      case 13:
+          return battleBeginning()
+
+    default:
+      console.log(e.keyCode)
+  }
+}
+
+window.addEventListener('keydown', (e) => {
+  handleKeyDown(e)
+})
    function mapStateToProps(state) {
       return {
         ...state.player,
       } 
     }
+  
    export default connect(mapStateToProps)(BattleMenuTest);
