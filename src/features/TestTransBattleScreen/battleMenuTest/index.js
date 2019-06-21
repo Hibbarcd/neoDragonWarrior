@@ -1,26 +1,79 @@
 import React from 'react';
-// import store from '../../config/store'
+import store from '../../../config/store'
 import './style.css'
-import { connect } from 'react-redux';
-import App from '../../../App';
 
- function BattleMenuTest(props) {
-   let combatBegin = props.combatBegin 
-   console.log(combatBegin)
-   combatBegin = false;
-   console.log(combatBegin)
+ export default function BattleMenuTest(battleMenu) {
 
-   if (props.combatBegin) {  
-    return (
-    <div className='noncombat' />
-  )
-   }
-   
-      else  {
-      return (         
-        <div className="battleMenuTest">
-          <table className="commandsMenu">
-            <tbody id='commands'>
+  const combatBegin = store.getState().battleMenuReducer.combatBegin
+console.log(combatBegin)
+ 
+
+  //  if (!combatBegin) {  
+  //   return (
+  //   <div className='noncombat' />
+  // )
+  //  }
+  // }
+//=========================reveal battle Screen==========================
+
+  
+
+//======================functional section================================================
+
+
+// else  {
+//   return (         
+//     <div className="battleMenuTest">
+//       <table className="commandsMenu">
+//         <tbody id='commands'>
+//         <tr id="fight">
+//           <td>FIGHT</td>
+//         </tr>
+//         <tr id="spell">            
+//           <td>SPELL</td>
+//         </tr>
+//         <tr id="run">
+//           <td>RUN</td>
+//         </tr>
+//         <tr id="item">
+//           <td>ITEM</td>
+//         </tr>               
+//       </tbody>
+//     </table> 
+//       </div>
+//     )
+// }
+// }
+
+// //=========================reveal battle Screen==========================
+// function battleBeginning(combatBegin) {
+// combatBegin = true
+// console.log('Starting Battle')
+// console.log(combatBegin)
+// }
+
+
+function dispatchMenu() {
+  store.dispatch({
+    type: 'DISPLAY_MENU',
+    payload: {
+      combatBegin: true
+    }
+  })
+}
+
+function attemptMenuDisplay(combatBegin){
+  const showMenu = store.getState().BattleMenuTest.combatBegin
+
+  if(DisplayCombatMenu(showMenu))
+        dispatchMenu()
+}
+
+function DisplayCombatMenu(combatBegin) {  
+  return (
+      <div className="battleMenuTest">
+        <table className="commandsMenu">
+          <tbody id='commands'>
             <tr id="fight">
               <td>FIGHT</td>
             </tr>
@@ -32,42 +85,31 @@ import App from '../../../App';
             </tr>
             <tr id="item">
               <td>ITEM</td>
-            </tr>               
-          </tbody>
-        </table> 
-          </div>
-        )
- }
+          </tr>               
+        </tbody>
+      </table> 
+    </div>  
+  )
 }
- 
-//=========================reveal battle Screen==========================
-function battleBeginning(combatBegin) {
-  combatBegin = true
-  console.log('Starting Battle')
-  console.log(combatBegin)
 }
-  
-
-//======================================================================
+//=======================================================================
 function handleKeyDown(e) {
   e.preventDefault()
   
   switch(e.keyCode) {
       case 13:
-          return battleBeginning()
-
+            return attemptMenuDisplay('DISPLAY_MENU')
+            
     default:
-      console.log(e.keyCode)
+      return (
+        <div className='noncombat' />
+      )
   }
 }
 
 window.addEventListener('keydown', (e) => {
   handleKeyDown(e)
 })
-   function mapStateToProps(state) {
-      return {
-        ...state.player,
-      } 
-    }
   
-   export default connect(mapStateToProps)(BattleMenuTest);
+return battleMenu
+}

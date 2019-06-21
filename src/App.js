@@ -6,7 +6,8 @@ import GlobalAudio from './features/music';
 import SaveBtn from './features/saveButton/saveState';
 //below can be imported as whole from battleScreen when testing is completed
 // import BattleMenu from './features/battleScreen/battleMenu/index';
-import BattleMenuTest from './features/TestTransBattleScreen/battleMenuTest/index'
+// import BattleMenuTest from './features/TestTransBattleScreen/battleMenuTest/index'
+import DisplayCombatMenu from './features/TestTransBattleScreen/battleMenuTest/index'
 // import BattleScreenTest from './features/TestTransBattleScreen/index'
 // import API from './utils/API';
 // import User from './utils/User';
@@ -32,7 +33,8 @@ class App extends Component {
             <World />
         </div>
             {/* <BattleScreen /> */}
-            <BattleMenuTest />
+            {/* <BattleMenuTest /> */}
+            <DisplayCombatMenu />
             {/* <BattleMenu /> */}
             <PartyMenu />
             <SaveBtn />

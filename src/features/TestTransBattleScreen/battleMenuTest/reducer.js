@@ -1,5 +1,5 @@
 const initialState = {
-    partyStats:{},
+    combatBegin: false,
   }
   
   const battleMenuReducer = (state=initialState, action) => {
