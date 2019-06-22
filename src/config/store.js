@@ -9,7 +9,7 @@ const rootReducer = combineReducers({
   player: playerReducer,
   enemy: enemyReducer,
   map: mapReducer,
-  battleMenuReducer,
+  battleMenu: battleMenuReducer,
   music: audioReducer,
 })
 
