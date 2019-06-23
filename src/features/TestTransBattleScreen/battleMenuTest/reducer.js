@@ -4,7 +4,7 @@ const initialState = {
   
   const battleMenuReducer = (state=initialState, action) => {
     switch(action.type) {
-      case 'UPDATE_MENU':
+      case 'DISPLAY_MENU':
         return {
           ...action.payload
         }

@@ -3,15 +3,12 @@ import store from '../../../config/store'
 
 export default function handleBattleMenu(battleMenuDisplay) {
 
-    const combatBegin = store.getState().battleMenu.combatBegin
-  console.log(combatBegin)
-   
-  function getNewState(oldState, combatBegin) {
+  function getNewState(newState, combatBegin) {
             // eslint-disable-next-line
     switch(combatBegin) {
       case 'DISPLAY_MENU':
             return (
-              !oldState
+              'state changed'
         )
   }        
   }
@@ -24,18 +21,20 @@ export default function handleBattleMenu(battleMenuDisplay) {
       }
     })
   }
+  console.log(dispatchMenu)
   
   
   function attemptMenuDisplay(combatBegin){
+    
     const oldState = store.getState().battleMenu.combatBegin
     const newState = getNewState(oldState, combatBegin)
   console.log(newState)
     dispatchMenu()
   }
   
-  
-  
-  //=======================================================================
+    
+    
+    //=======================================================================
   function handleKeyDown(e) {
     e.preventDefault()
     
