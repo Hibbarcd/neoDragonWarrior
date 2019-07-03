@@ -1,11 +1,16 @@
 import React from 'react';
+// import store from '../../config/store'
 import { connect } from 'react-redux'
-import handleBattleMenu from './displaySetting'
 import './style.css'
 
 function BattleMenuDisplay(props)  {
   return (         
-    <div className="battleMenuTest">
+    <div 
+    // style={{
+    //   visibility: 'visible'
+    // }}
+    className="battleMenuTest">
+
       <table className="commandsMenu">
         <tbody id='commands'>
         <tr id="fight">
@@ -24,13 +29,15 @@ function BattleMenuDisplay(props)  {
     </table> 
       </div>
     )
+    
 }
-
-//=======================================================================
 function mapStateToProps(state) {
   return {
-    ...state.battleMenu,
+    ...state.player,
   }
 }
 
-export default connect(mapStateToProps)(handleBattleMenu(BattleMenuDisplay))
+//=======================================================================
+export default connect(mapStateToProps)(BattleMenuDisplay)
+
+

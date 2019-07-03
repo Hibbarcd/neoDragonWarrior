@@ -1,5 +1,7 @@
 import store from '../../config/store'
 import { SPRITE_SIZE, MAP_WIDTH, MAP_HEIGHT } from '../../config/constants'
+import BattleMenuDisplay from '../TestTransBattleScreen/battleMenuTest/index'
+import App from '../../App';
 
 export default function handleMovement(player) {
 
@@ -74,7 +76,11 @@ export default function handleMovement(player) {
     if (oldPos )
       return alert("Opened Chest") 
   }
-
+  function beginBattle(oldPos) {
+    if (BattleMenuDisplay)
+      return alert("beginning battle")
+      App.render()
+  }
 //===================movement directions=====================================================================
   function handleKeyDown(e) {
     e.preventDefault()
@@ -97,6 +103,10 @@ export default function handleMovement(player) {
         case 85:
         return attemptUse("USE");
 
+        case 13:
+        return beginBattle(BattleMenuDisplay);
+        
+        
         default:
         console.log(e.keyCode)
     }

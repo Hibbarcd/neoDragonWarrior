@@ -5,7 +5,6 @@ import PartyMenu from './features/partyStatusMenu/index';
 import GlobalAudio from './features/music';
 import BattleMenuDisplay from './features/TestTransBattleScreen/battleMenuTest/index'
 import SaveBtn from './features/saveButton/saveState';
-//below can be imported as whole from battleScreen when testing is completed
 
 // import API from './utils/API';
 // import User from './utils/User';
@@ -25,12 +24,14 @@ class App extends Component {
   render() {
     return (
       <div className='wrapper'>
-          <GlobalAudio/>
+            <GlobalAudio/>
           {/* <User name="Jessica Doe" email="hello@jessica.com" />; */}
         <div className='worldMap visible'>
             <World />
         </div>
-        <BattleMenuDisplay />
+        <div>
+            <BattleMenuDisplay />
+        </div>
             <PartyMenu />
             <SaveBtn />
       </div>     

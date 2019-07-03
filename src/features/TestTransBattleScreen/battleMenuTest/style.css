@@ -1,4 +1,4 @@
-.battleMenu {
+.battleMenuTest {
     position: relative;
     margin: 0 auto;
     height: 400px;
@@ -9,7 +9,7 @@
     border-Radius: 15px;
     background-Color: black;
     color: white;
-    z-index: 15;
+    /* visibility: 'hidden' */
 }
  h1,tr {
     position: relative;
@@ -28,5 +28,4 @@
  }
 #commands {
     padding: 0 20px 0 10px;
-    z-index: 15;
 }
