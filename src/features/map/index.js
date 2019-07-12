@@ -87,7 +87,8 @@ function MapTile(props) {
 
      {
          props.tiles.map(tile => 
-         <MapTile tile={tile} 
+         <MapTile tile={tile}
+                   key={tile + id}
          
          /> )
      }
@@ -109,7 +110,7 @@ function Map(props) {
         }}
         >
         {
-            props.tiles.map( row => <MapRow tiles={row} /> )
+            props.tiles.map( row => <MapRow tiles={row} key={row + id}/> )
         }
         </div>
     )
