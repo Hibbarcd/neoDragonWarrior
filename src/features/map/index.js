@@ -18,8 +18,8 @@ function MapTile(props) {
     switch (type) {
         case 100:
             return 'grass'
-        // case 101:
-        //     return 'black'
+        case 101:
+            return 'black'
         case 102:
             return 'tree'
         case 103: 
@@ -87,9 +87,7 @@ function MapTile(props) {
 
      {
          props.tiles.map(tile => 
-         <MapTile tile={tile}
-                   key={tile + id}
-         
+         <MapTile tile={tile}         
          /> )
      }
      </div> 
@@ -110,7 +108,7 @@ function Map(props) {
         }}
         >
         {
-            props.tiles.map( row => <MapRow tiles={row} key={row + id}/> )
+            props.tiles.map( row => <MapRow tiles={row} /> )
         }
         </div>
     )

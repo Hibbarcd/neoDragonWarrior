@@ -9,7 +9,9 @@ function BattleMenuDisplay(props)  {
     // style={{
     //   visibility: 'visible'
     // }}
-    className="battleMenuTest">
+    className="battleMenuTest"
+    
+    >
 
       <table className="commandsMenu">
         <tbody id='commands'>
@@ -29,7 +31,7 @@ function BattleMenuDisplay(props)  {
     </table> 
       </div>
     )
-    
+   
 }
 function mapStateToProps(state) {
   return {

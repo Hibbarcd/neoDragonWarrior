@@ -9,6 +9,9 @@ body {
 .row {
     height: 36px;
 }
+.black {
+    background-color: black;
+}
 .grass {
     /* background-color: #42b842; */
 }
