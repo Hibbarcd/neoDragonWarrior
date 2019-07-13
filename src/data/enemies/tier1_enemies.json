@@ -2,7 +2,7 @@
   {
       "id": "1e",
       "name": "slime",
-      "image": "./placeholder.png",
+      "image": "./slime.png",
       "HP": 5,
       "MP": 0,
       "AP": 2,
@@ -16,7 +16,7 @@
   {
     "id": "2e",
     "name": "red-slime",
-    "image": "./placeholder.png",
+    "image": "./red_slime.png",
     "HP": 10,
     "MP": 0,
     "AP": 4,
@@ -30,7 +30,7 @@
 {
     "id": "3e",
     "name": "Evil Crow",
-    "image": "./placeholder.png",
+    "image": "./big_crow.png",
     "HP": 12,
     "MP": 0,
     "AP": 6,
@@ -44,7 +44,7 @@
 {
     "id": "4e",
     "name": "Big Bunny",
-    "image": "./placeholder.png",
+    "image": "./big_bunny.png",
     "HP": 12,
     "MP": 0,
     "AP": 5,
@@ -58,7 +58,7 @@
 {
     "id": "5e",
     "name": "Lizard",
-    "image": "./placeholder.png",
+    "image": "./lizard.png",
     "HP": 10,
     "MP": 0,
     "AP": 4,
@@ -72,7 +72,7 @@
 {
     "id": "6e",
     "name": "Feral Cat",
-    "image": "./placeholder.png",
+    "image": "./feral_cat.png",
     "HP": 12,
     "MP": 0,
     "AP": 6,
@@ -86,7 +86,7 @@
 {
     "id": "7e",
     "name": "Drakee",
-    "image": "./placeholder.png",
+    "image": "./drakee.png",
     "HP": 10,
     "MP": 0,
     "AP": 5,
@@ -100,7 +100,7 @@
 {
     "id": "8e",
     "name": "Thorny",
-    "image": "./placeholder.png",
+    "image": "./thorny.png",
     "HP": 20,
     "MP": 0,
     "AP": 4,
