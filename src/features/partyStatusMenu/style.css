@@ -1,0 +1,54 @@
+.Party_Status_Menu {
+    margin: 0 auto;
+    height: 180px;
+    width: 814px;
+    border: 3px solid white;
+    border-Radius: 12px;
+    background-Color: black;
+    color: white;
+    margin-top: 40px;
+}
+h1 {
+    position: relative;
+    color: white;
+    font-size: 1.4em;
+    padding-top: 0px;
+    padding-bottom: 10px;
+    z-index: 15;
+    width: 145px;
+    background-color: black;
+}
+h2 {
+    position: relative;
+    color: white;
+    font-size: 1.1em;
+    margin: auto;
+    padding-left: 30px;
+    padding-right: 60px;
+    z-index: 15; 
+ } 
+li {
+    position: relative;
+    display: inline-block;
+    padding-right: 60px;
+    padding-left: 30px;
+    z-index: 15;
+    color: wheat;
+    text-decoration: underline;
+}
+.table {
+    position: relative;
+}
+.row {
+    font-size: 1.3em;
+    border: 2px white solid;
+    font-weight: bold;
+
+}
+td {
+    font-size: 1.3em;
+    font-weight: bold;
+    padding-left: 25px;
+    padding-right: 40px;
+    border: 2px white solid;
+}

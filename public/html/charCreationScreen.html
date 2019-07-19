@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Character Gen</title>
+  <!-- Latest compiled and minified CSS & JS -->
+  <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css"/>
+  <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css"/>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+<body>
+
+  <div class="container">
+    <div class="jumbotron">
+      <h1>Character Creation</h1>
+      <!-- <h3>Welcome to Lucinda's Inn, where all the best heroes are found!</h3> -->
+      <hr>
+      <!-- <a href="/"><button class="btn btn-danger btn-lg"><span class="fa fa-eye"></span> View Characters</button></a> -->
+    </div>
+    <div class="row">
+
+      <div class="col-12">
+
+        <div class="card">
+          <div class="card-header">
+            <h3><strong>Create Thy Character!</strong></h3>
+          </div>
+          <div class="card-body">
+            <form method="POST" role="form">
+
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name">
+              </div>
+
+              <div class="form-group">
+                <label for="role">Class</label>
+                <input type="radio" name="class" class="form-control" id="class" value="Soldier">Soldier<br>
+                <input type="radio" name="class" class="form-control" id="class" value="Fighter">Fighter<br>
+                <input type="radio" name="class" class="form-control" id="class" value="Thief">Thief<br>
+                <input type="radio" name="class" class="form-control" id="class" value="Cleric">Cleric<br>
+                <input type="radio" name="class" class="form-control" id="class" value="Wizard">Wizard<br>
+
+              </div>
+
+              <div class="form-group">
+                <label for="sex">Sex</label>
+                <input type="radio" name="sex" class="form-control" id="class" value="Male">Male<br>
+                <input type="radio" name="sex" class="form-control" id="class" value="Female">Female<br>              </div>
+            </form>
+
+              <div class="hp-output">
+                <label for="maxHP">Health Points</label>
+                <div class="generatedHP" id="health-points">
+              </div>
+              <div class="mp-output">
+                <label for="maxMP">Magic Points</label>
+                <div class="generatedMP" id="magic-points">
+              </div>
+            <br>
+            <div class="str-output">
+                <label for="str">Strength</label>
+                <div class="generatedSTR" id="strength">
+              </div>
+              <div class="vitality-output">
+                <label for="vit">Vitality</label>
+                <div class="generatedVIT" id="vitality">
+              </div>
+              <div class="agility-output">
+                <label for="agi">Agility</label>
+                <div class="generatedAGI" id="agility">
+              </div>
+              <div class="intelligence-output">
+                <label for="int">intelligence</label>
+                <div class="generatedINT" id="intelligence">
+              </div>            
+              <div class="luck-output">
+                <label for="luc">Luck</label>
+                <div class="generatedLUC" id="luck">
+              </div>
+              <button type="submit" class="btn btn-primary btn-md" id="reset-btn"><span class="fa fa-fire"></span> Re-roll Stats</button>
+
+            <div class="text-right">
+              <button type="submit" class="btn btn-primary btn-md" id="add-btn"><span class="fa fa-fire"></span> Add to the Party</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+
+    // $("#add-btn").on("click", function(event) {
+    //   event.preventDefault();
+    //   var newCharacter = {
+    //     name: $("#name").val().trim(),
+    //     class: $("#class").val().trim(),
+    //     sex: $("#sex").val().trim(),
+    //     maxHP: $("#health-points").val().trim(),
+    //     maxMP: $("#magic-points").val().trim()
+
+    //   };
+
+    //   $.post("/api/characters", newCharacter)
+    //     .then(function(data) {
+    //       console.log("add.html", data);
+    //       alert("Adding character...");
+    //     });
+    // });
+  </script>
+    <script src="assets/javascript/script.js"></script> 
+
+</body>
+</html>

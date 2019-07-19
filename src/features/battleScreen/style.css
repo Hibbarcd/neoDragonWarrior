@@ -1,0 +1,40 @@
+
+.battleMenu {
+    position: relative;
+    margin: 0 auto;
+    height: 400px;
+    width: 255px;
+    right: 62vh;
+    bottom: 127.5vh;
+    border: 5px solid white;
+    border-Radius: 15px;
+    background-Color: black;
+    color: white;
+    z-index: 15;
+}
+ h1 {
+    position: relative;
+    font-size: 1.4em;
+    padding-top: 0px;
+    z-index: 15;
+    margin: auto;
+    width: 145px;
+    background-color: black;
+    border-radius: 10px;
+    visibility: hidden;
+    
+}
+h2 {
+    position: relative;
+    font-size: 1.1em;
+    padding: 0;
+    z-index: 10; 
+ } 
+ .commandsMenu {
+     font-size: 2.3em;
+     padding-top: 10px;
+     padding-left: 20px;
+ }
+#commands {
+    padding: 0 20px 0 10px;
+}
