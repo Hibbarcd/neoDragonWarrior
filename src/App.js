@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import World from './features/world';
 import PartyMenu from './features/partyStatusMenu/index';
 import GlobalAudio from './features/music';
-import BattleMenuDisplay from './features/TestTransBattleScreen/battleMenuTest/index'
+// import BattleMenuDisplay from './features/TestTransBattleScreen/battleMenuTest/index'
 import SaveBtn from './features/saveButton/saveState';
 
 // import API from './utils/API';
@@ -30,7 +30,7 @@ class App extends Component {
             <World />
         </div>
         <div>
-            <BattleMenuDisplay />
+            {/* <BattleMenuDisplay /> */}
         </div>
             <PartyMenu />
             <SaveBtn />
