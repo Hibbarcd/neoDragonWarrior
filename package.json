@@ -23,7 +23,7 @@
     "react-transition-group": "^4.1.1",
     "redux": "^4.0.1",
     "redux-sounds": "^3.0.1",
-    "sequelize": "^4.31.0"
+    "sequelize": "^5.15.1"
   },
   "scripts": {
     "start": "react-scripts start && node server.js",
